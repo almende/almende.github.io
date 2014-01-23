@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Nets - Introduction </title>
+  <link rel="shortcut icon" href="img/favicon.ico" >
+  <link type="text/css" rel="stylesheet" href="css/style.css"> 
+  
+  <meta name="title" content="Nets - Introduction">   
+  <meta name="keywords" content="nets, chap, algorithms, learning, optimisation, classification, prediction, signal processing, open source" >
+  <meta name="description" content="Nets is a CHAP container developed at Almende with algorithms for learning, classification, prediction, and signal processing." >
+  <meta name="author" content="Almende B.V." >
+
+</head>
+
+<body>
+
+<a href="https://github.com/almende/nets" style="position: fixed; top: 0; right: 0; border: 0;" >
+  <img src="img/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" >
+</a>
+  
+<div id="container">
+
+<div id="menu">
+<div id="menu-inner">
+
+<a href="http://almende.github.com/nets"><img src="img/logo/nets128.png" alt="logo"></a>
+<br>
+
+<div class="nav">
+<ul>
+  <li>
+    Nets
+    <ul>
+      <li><a class="nav" href="index.html">Introduction</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div id="contents">
+  <h1 id='introduction'>Introduction</h1>
+
+<p>Nets contains all algorithms developed at Almende. Our algorithms are tailored for applications that have to do with networks. Networks (or nets) of humans, machines, or (slightly exaggerated) neurons. Our research concerns the use of local mechanisms to bring about global behaviour. However, besides that we also develop standard or state-of-the-art techniques that have to do with concrete practical problems of machine learning, artificial intelligence, and networks of sensors, smartphones, and robots.</p>
+
+<p>Our algorithms can be divided into several categories:</p>
+
+<ul>
+<li><a href='#signalprocessing'>Signal processing</a></li>
+
+<li><a href='#classification'>Classification</a></li>
+
+<li><a href='#learning'>Learning</a></li>
+
+<li><a href='#planning'>Planning</a></li>
+
+<li><a href='#prediction'>Prediction</a></li>
+
+<li><a href='#reasoning'>Reasoning</a></li>
+</ul>
+<!--
+[<img src="img/dobots.png" 
+  style="margin-top: 30px;" 
+  title="Click for a larger view">](img/dobots.png)
+-->
+<h2 id='signalprocessing'>Signal processing</h2>
+
+<p>Nets contains many algorithms for signal processing and preprocessing which can be used as basic functionality for classification, learning, and other higher-level tasks. There are for example vision processing algorithms (such as optic flow calculations and basic image feature extraction).</p>
+
+<p>Our signal processing suite will contain (besides image processing facilities) procedures like <a href='http://en.wikipedia.org/wiki/Principal_components_analysis'>principle component analysis</a>, <a href='http://en.wikipedia.org/wiki/Independent_component_analysis'>independent component analysis</a>, <a href='http://en.wikipedia.org/wiki/Singular_value_decomposition'>singular value decomposition</a>, and other pretty standard techniques.</p>
+
+<p>Our current signal processing software:</p>
+
+<ul>
+<li><a href='https://github.com/mrquincle/aim_modules/KeypointModule'>ORB feature descriptor</a></li>
+</ul>
+
+<h2 id='classification'>Classification</h2>
+
+<p>Nets contains several algorithms for classification. The requirements for robust classification stem from robotic platforms. We have hence classification methods that are incremental opposed to batch-based. New data items can enter the classifier in an incremental fashion rather than having all new data items available in for example a file. This makes the software useful on robotics, or in real-time settings, contrary to for example Hadoop or the Google Prediction API. However, what lacks yet is to provide a nice online interface to have these classifiers used by third-parties.</p>
+
+<p>Our repository of classifiers will be extended in the near future with for example the <a href='http://en.wikipedia.org/wiki/Support_vector_machine'>support vector machine</a>, the <a href='http://en.wikipedia.org/wiki/Naive_Bayes_classifier'>naive Bayes classifier</a>, and <a href='http://en.wikipedia.org/wiki/Multilayer_perceptron'>multilayer perceptrons</a>.</p>
+
+<p>Our current classifiers:</p>
+
+<ul>
+<li><a href='https://github.com/mrquincle/ilvq'>iLVQ</a></li>
+
+<li><a href='https://github.com/mrquincle/artmap'>ARTMAP</a></li>
+</ul>
+
+<h2 id='learning'>Learning</h2>
+
+<p>Nets provides algorithms for learning optimal policies in a general action-state space (the system normally represented by a POMDP, a Partial Observable Markov Decision Process). Finding such optimal policies can be done by reinforcement learning and other types of learning (for example using intrinsic reward rather than extrinsic reward). The type of algorithms developed here can be used to have a group of robots vaccuum a large office building as efficiently as possible, or to have a group of UAVs (unmanned aerial vehicles) search for a victim on sea or a fire in the dunes as quick as possible.</p>
+
+<p>The type of algorithms to be exected are <a href='http://en.wikipedia.org/wiki/Reinforcement_learning'>reinforcement learning</a> and variants like <a href='http://en.wikipedia.org/wiki/Q_learning'>Q-learning</a>, <a href='http://en.wikipedia.org/wiki/SARSA'>SARSA</a> and <a href='http://en.wikipedia.org/wiki/Temporal_difference_learning'>temporal difference learning</a>.</p>
+
+<p>Another series of algorithms are meant for state estimation, such as the <a href='http://en.wikipedia.org/wiki/Kalman_filter'>Kalman filter</a> (and variants such as the ensemble and unscented), and the <a href='http://en.wikipedia.org/wiki/Particle_filter'>particle filter</a>.</p>
+
+<p>In robotics the combination of state estimation (of the position of the robot itself) and learning (of a map) is called <a href='http://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping'>SLAM</a> (Simultaneous Localisation And Mapping). Incremental versions of SLAM are of interest to us.</p>
+
+<p>Last, but not least, unsupervised learning methods, such as <a href='http://en.wikipedia.org/wiki/K-means_clustering'>k-means clustering</a>, <a href='http://en.wikipedia.org/wiki/Principal_components_analysis'>slow feature analysis</a>, will be included.</p>
+
+<p>Our current learning methods:</p>
+
+<ul>
+<li><a href='https://github.com/mrquincle/particlefilter'>Particle filter</a></li>
+
+<li><a href='https://github.com/mrquincle/actionperception'>Q-learning</a></li>
+</ul>
+
+<p>With respect to learning it is important to note that our <a href='#classification'>classification</a> methods can be used in an unsupervised learning setting.</p>
+
+<h2 id='planning'>Planning</h2>
+
+<p>Nets provides currently no planning algorithms. With respect to planning as a decision process, it is of course possible to use our <a href='#learning'>learning</a> algorithms.</p>
+
+<h2 id='prediction'>Prediction</h2>
+
+<p>Nets provides temporal classification algorithms and prediction algorithms. In other words, everything that has something to do with time.</p>
+
+<p>Our algorithms will be - as always - concentrated around incremental and/or decentralised approaches. And will entail <a href='http://en.wikipedia.org/wiki/Model_predictive_control'>model predictive control</a>, <a href='http://en.wikipedia.org/wiki/Reservoir_computing'>reservoir computing</a>, and for example <a href='http://en.wikipedia.org/wiki/Conditional_random_field'>conditional random fields</a>.</p>
+
+<p>Our current prediction algorithms:</p>
+
+<ul>
+<li><a href='https://github.com/mrquincle/esn'>ESN</a></li>
+</ul>
+
+<h2 id='reasoning'>Reasoning</h2>
+
+<p>Reasoning is perhaps not a task that is quickly associated with networks of entities, but advances in especially probabilistic graphical models have introduced a lot of synergies between Markov decision processes, Bayesian inference, and stochastic optimal control, to name a few.</p>
+
+<p>Our algorithms will entail <a href='http://en.wikipedia.org/wiki/Belief_propagation'>belief propagation</a>, <a href='http://en.wikipedia.org/wiki/Variational_Bayesian_methods'>variational methods</a> (a generalized version of <a href='http://en.wikipedia.org/wiki/Expectation-maximization'>expectation-maximization</a>) and other algorithms of a similar taste.</p>
+
+<p>Our current reasoning algorithms:</p>
+
+<ul>
+<li><a href='https://github.com/mrquincle/aim_modules/BeliefModule'>Belief Propagation</a></li>
+</ul>
+
+<h2 id='opensource'>Open source</h2>
+
+<p>Our algorithms are offered as open-source software under LGPLv3 or Apache license. Almende and spin-offs use it in their commercial products, which contribute to their maturity.</p>
+  
+  <div class="lastupdate">
+  Site last rendered 21 January 2014
+  </div>
+</div>
+
+</div>
+</body>
+</html>

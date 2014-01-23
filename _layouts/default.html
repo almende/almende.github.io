@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Almende - {{ page.title }} </title>
+  <link rel="shortcut icon" href="img/favicon.ico" >
+  <link type="text/css" rel="stylesheet" href="css/style.css"> 
+  
+  <meta name="title" content="Almende - {{ page.title }}">   
+  <meta name="keywords" content="chap, datasets, algorithms" >
+  <meta name="description" content="Software at Almende" >
+  <meta name="author" content="Almende B.V." >
+
+</head>
+
+<body>
+
+<a href="https://github.com/almende/almende.github.io" style="position: fixed; top: 0; right: 0; border: 0;" >
+  <img src="img/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" >
+</a>
+  
+<div id="container">
+
+<div id="menu">
+<div id="menu-inner">
+
+<a href="http://almende.github.io"><img src="img/logo/almende.png" alt="logo"></a>
+<br>
+
+<div class="nav">
+<ul>
+  <li>
+    Nets
+    <ul>
+      <li><a class="nav" href="index.html">Introduction</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div id="contents">
+  {{ content }}
+  
+  <div class="lastupdate">
+  Site last rendered {{ site.time | date_to_long_string }}
+  </div>
+</div>
+
+</div>
+</body>
+</html>
